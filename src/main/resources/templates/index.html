@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultar CEP</title>
+  </head>
+  <body>
+    <h1>Consulta de CEP</h1>
+    <label for="cep">Digite o CEP:</label>
+    <input
+      type="text"
+      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+      id="input_zipcode"
+      maxlength="8"
+    /><br /><br />
+    <button onClick="handleSubmit()">Consultar</button>
+
+    <br />
+    <br />
+
+    <table style="width: 100%; text-align: center">
+      <tr>
+        <th>Logradouro/Nome</th>
+        <th>Bairro/Distrito</th>
+        <th>Localidade/UF</th>
+        <th>CEP</th>
+      </tr>
+      <tr>
+        <td id="datacell_street"></td>
+        <td id="datacell_neighborhood"></td>
+        <td id="datacell_cityAndState"></td>
+        <td id="datacell_zipcode"></td>
+      </tr>
+    </table>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
